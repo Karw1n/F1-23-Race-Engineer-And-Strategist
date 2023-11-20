@@ -1,5 +1,6 @@
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -35,8 +36,9 @@ public class Client{
         try {
             InetAddress gameInetAddress = InetAddress.getByName(ip);
             socket = new DatagramSocket(port, gameInetAddress);
-            System.out.println("UDP Client started. Listening on port: " + port);
 
+            System.out.println("UDP Client started. Listening on port: " + port);
+            
             while (true) {
                 DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
                 
@@ -49,20 +51,57 @@ public class Client{
                 
                 PacketBuffer packetBuffer = new PacketBuffer(receivedData);
                 ByteBuffer test = ByteBuffer.wrap(receivedData);
-                test.order(ByteOrder.LITTLE_ENDIAN);
-                System.out.println("This might fail");
+                PacketLapData lapDataPacket = new PacketLapData();
+                PacketParticipantData participantDataPacket = new PacketParticipantData();
                 
-                //int length = packet.getLength();
-                System.out.println(test.position());
+                PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket);
+                Packet somePacket = packetDecoder.buildPacket();
+                String stringToSave = somePacket.toString();
+                String fileNameLocation = "file.dat";
+                if (somePacket.getHeader().getPacketId() == 2) {
+                    fileNameLocation = "lapData.dat"; 
+                } else if (somePacket.getHeader().getPacketId() == 4) {
+                    fileNameLocation = "participantData.dat";
+                }
+                
+                FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
+                newOutputStream.write(stringToSave.getBytes());
+                newOutputStream.close();
+
+                test.order(ByteOrder.LITTLE_ENDIAN);
+                
                 int packetLength = packet.getLength();
-                System.out.println("packetLength is: " + packetLength);
+                //System.out.println("packetLength is: " + packetLength);
                 test.position(6);
                 int packetType = 0xFF & test.get();
-                System.out.println("Packet Type is: " + packetType);
+                //System.out.println("Packet Type is: " + packetType);
+
+                //Print Participant data list.
                 
                 String message = "PType: " +  (Integer.toString(packetType) + " Packet Size: " + (Integer.toString(packetLength)) + "[ "  + "  ]"  + "\n");
                 byte[] fileMessage = message.getBytes();
                 
+                // if (packetType == 1){
+                //     //Header
+                //     int packetFormat = packetBuffer.getNextUInt16AsInt();
+                //     int gameYear = packetBuffer.getNextUInt8AsInt();
+                //     int gameMajorVersion = packetBuffer.getNextUInt8AsInt();
+                //     int gameMinorVersion = packetBuffer.getNextUInt8AsInt();
+                //     int packetVersion = packetBuffer.getNextUInt8AsInt();
+                //     int packetID = packetBuffer.getNextUInt8AsInt();
+                //     BigInteger sessionUID = packetBuffer.getNextUInt64AsBigInteger();
+                //     float sessionTime = packetBuffer.getNextFloat();
+                //     long frameIdentifier = packetBuffer.getNextUIntAsLong();
+                //     long overallFrameIdentifier = packetBuffer.getNextUIntAsLong();
+                //     int playerCarIndex = packetBuffer.getNextInt8AsInt();
+                //     int secondayPlayerCarIndex = packetBuffer.getNextInt8AsInt();
+                //     int weather = packetBuffer.getNextInt8AsInt();
+                //     int trackTemperature = packetBuffer.getNextInt8AsInt();
+                //     System.out.println("PlayerCarIndex is: " + playerCarIndex);
+                //     System.out.println("Weather is: " + weather);
+                //     System.out.println("TrackTemp is: " + trackTemperature);
+                // }
+
                 FileOutputStream outputStream = new FileOutputStream(fileName, true);
                 outputStream.write(fileMessage);
                 outputStream.close();
@@ -79,13 +118,18 @@ public class Client{
                 packetBuffer.getNextUInt8AsInt();
                 packetBuffer.getNextUInt8AsInt();
                 int packetId = packetBuffer.getNextUInt8AsInt();
+                packetBuffer.getNextUInt64AsBigInteger();
+                float sessionTime = packetBuffer.getNextFloat();
+                long frameIdentifier = packetBuffer.getNextUIntAsLong();
+                long overallFrameIdentifier = packetBuffer.getNextUIntAsLong();
+                int playerCarIndex = packetBuffer.getNextInt8AsInt();
                 
                 
-                System.out.println("PacketID: " + packetId); 
-		        
-                System.out.println("SessionUID: " + packetBuffer.getNextUInt64AsBigInteger()); // 8
-                System.out.println("SessionTime: " + packetBuffer.getNextFloat());
-		        System.out.println("frameIdentifier: " + packetBuffer.getNextUIntAsLong());
+                // System.out.println("PacketID: " + packetId); 
+		    
+                // System.out.println("SessionTime: " + sessionTime);
+		        // System.out.println("frameIdentifier: " + frameIdentifier);
+                // System.out.println("Player Car Index: " + playerCarIndex);
 		        
                 
 
@@ -142,14 +186,14 @@ public class Client{
                         break;
                 }
 
-                System.out.println("Amount of packets: " + packetsReceived);
-                System.out.println(" ");
-                System.out.print("Packet 1 count: " + noOfPacket1); System.out.print(" Packet 2 count: " + noOfPacket2); System.out.print(" Packet 3 count: " + noOfPacket3);
-                System.out.print("\nPacket 4 count: " + noOfPacket4); System.out.print(" Packet 5 count: " + noOfPacket5); System.out.print(" Packet 6 count: " + noOfPacket6);
-                System.out.print("\nPacket 7 count: " + noOfPacket7); System.out.print(" Packet 8 count: " + noOfPacket8); System.out.print(" Packet 9 count: " + noOfPacket9);
-                 System.out.print("\nPacket 10 count: " + noOfPacket10);  System.out.print(" Packet 11 count: " + noOfPacket11); System.out.print(" Packet 12 count: " + noOfPacket12);
-                System.out.println("");
-                System.out.println("-------------------------------------------------------------------------------------------------------");
+                // System.out.println("Amount of packets: " + packetsReceived);
+                // System.out.println(" ");
+                // System.out.print("Packet 1 count: " + noOfPacket1); System.out.print(" Packet 2 count: " + noOfPacket2); System.out.print(" Packet 3 count: " + noOfPacket3);
+                // System.out.print("\nPacket 4 count: " + noOfPacket4); System.out.print(" Packet 5 count: " + noOfPacket5); System.out.print(" Packet 6 count: " + noOfPacket6);
+                // System.out.print("\nPacket 7 count: " + noOfPacket7); System.out.print(" Packet 8 count: " + noOfPacket8); System.out.print(" Packet 9 count: " + noOfPacket9);
+                //  System.out.print("\nPacket 10 count: " + noOfPacket10);  System.out.print(" Packet 11 count: " + noOfPacket11); System.out.print(" Packet 12 count: " + noOfPacket12);
+                // System.out.println("");
+                // System.out.println("-------------------------------------------------------------------------------------------------------");
             }
 
         } catch (Exception e) {
