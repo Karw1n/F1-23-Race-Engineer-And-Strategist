@@ -30,6 +30,8 @@ public class LapData extends Packet {
     private int pitLaneTimeInLaneInMS;
     private int pitStopTimerInMS;
     private int pitStopShouldServePen;
+
+    public LapData() {}
     
     public String getDriverName() {
         return driverName;

@@ -20,6 +20,8 @@ public class CarMotionData extends Packet {
     private float pitch;
     private float roll;
 
+    public CarMotionData() {}
+
     public float getWorldPositionX() {
         return worldPositionX;
     }
