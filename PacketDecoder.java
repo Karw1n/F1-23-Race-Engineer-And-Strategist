@@ -4,6 +4,13 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import data.PacketLapData;
+import data.PacketParticipantData;
+import data.elements.Header;
+import data.elements.LapData;
+import data.elements.Packet;
+import data.elements.ParticipantData;
+
 public class PacketDecoder {
     
     private PacketBuffer packetBuffer;

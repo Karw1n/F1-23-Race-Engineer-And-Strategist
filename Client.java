@@ -9,6 +9,10 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 
+import data.PacketLapData;
+import data.PacketParticipantData;
+import data.elements.Packet;
+
 public class Client{
     private DatagramSocket datagramSocket;
     private InetAddress inetAddress; // Server's IP address 

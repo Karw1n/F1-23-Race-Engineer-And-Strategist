@@ -1,4 +1,8 @@
+package data;
 import java.util.List;
+
+import data.elements.LapData;
+import data.elements.Packet;
 
 public class PacketLapData extends Packet {
     private List<LapData> lapDataList;

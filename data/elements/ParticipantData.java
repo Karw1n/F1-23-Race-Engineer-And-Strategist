@@ -1,3 +1,4 @@
+package data.elements;
 public class ParticipantData {
     private int aiControlled;
     private int driverId;

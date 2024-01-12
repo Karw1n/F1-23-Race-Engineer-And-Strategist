@@ -1,4 +1,8 @@
+package data;
 import java.util.List;
+
+import data.elements.Packet;
+import data.elements.ParticipantData;
 
 public class PacketParticipantData extends Packet {
 

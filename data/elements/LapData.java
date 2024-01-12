@@ -1,3 +1,4 @@
+package data.elements;
 public class LapData extends Packet {
     private String driverName;
     private int lastLapTimeInMS;
