@@ -1,5 +1,7 @@
 package data.elements;
 
+import java.util.Arrays;
+
 public class CarTelemetryData {
     private int speed;
     private float throttle;
@@ -117,6 +119,24 @@ public class CarTelemetryData {
         this.surfaceType = surfaceType;
     }
 
-    public String toString() {}
+    public String toString() {
+        return
+            "Speed: "                           + speed +
+                "\nThrottle: "                  + throttle +
+                "\nSteer: "                     + steer +
+                "\nBrake: "                     + brake +
+                "\nClutch: "                    + clutch +
+                "\nGear: "                      + gear +
+                "\nEngine RPM: "                + engineRPM +
+                "\nDRS: "                       + drs +
+                "\nRev Lights Percent: "        + revLightsPercent +
+                "\nRev Lights Bit Value: "      + revLightsBitValue +
+                "\nBrakes Temperature: "        + brakeTemperature +
+                "\nTyres Surface Temperature: " + tyresSurfaceTemperature +
+                "\nTyres Inner Temperature: "   + tyresInnerTemperature +
+                "\nEngine Temperature: "        + engineTemperature +
+                "\nTyres Pressure: "            + tyresPressure +
+                "\nSurface Type: "              + surfaceType;
+    }
 
 }

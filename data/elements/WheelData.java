@@ -46,4 +46,12 @@ public class WheelData<T> {
 	public void setFrontRight(T frontRight) {
 		this.frontRight = frontRight;
 	}
+
+	public String toString() {
+		return
+			"FL: "  + frontLeft +
+			" FR: "  + frontRight +
+			" RL: "  + rearLeft  + 
+			" RR: " + rearRight;
+	}
 }
