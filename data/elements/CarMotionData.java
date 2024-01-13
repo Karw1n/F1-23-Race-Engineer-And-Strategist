@@ -131,5 +131,25 @@ public class CarMotionData extends Packet {
         this.roll = roll;
     }
 
-    public String toString(){}
+    public String toString() {
+        return
+        "\nWorldPositionX     : "   + worldPositionX +
+        "\nWorldPositionY     : "   + worldPositionY +
+        "\nWorldPositionZ     : "   + worldPositionZ +
+        "\nWorldVelocityX     : "   + worldVelocityX +
+        "\nWorldVelocityY     : "   + worldVelocityY +
+        "\nWorldVelocityZ     : "   + worldVelocityZ +
+        "\nWorldForwardDirX   : "   + worldForwardDirX +
+        "\nWorldForwardDirY   : "   + worldForwardDirY +
+        "\nWorldForwardDirZ   : "   + worldForwardDirZ +
+        "\nWorldRightDirX     : "   + worldRightDirX +
+        "\nWorldRightDirY     : "   + worldRightDirY +
+        "\nWorldRightDirZ     : "   + worldRightDirZ +
+        "\ngForceLateral      : "   + gForceLateral +
+        "\ngForceLongitudinal : "   + gForceLongitudinal +
+        "\ngForceVertical     : "   + gForceVertical +
+        "\nYaw                : "   + yaw +
+        "\nPitch              : "   + pitch +
+        "\nRoll               : "   + roll;
+    }
 }
