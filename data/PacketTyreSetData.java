@@ -2,6 +2,7 @@ package data;
 
 import java.util.List;
 
+import data.elements.ParticipantData;
 import data.elements.TyreSetData;
 
 public class PacketTyreSetData {
@@ -33,6 +34,14 @@ public class PacketTyreSetData {
         return fittedIdx;
     }
 
-    public String toString() {}
+    public String toString() {
+        String string = "Tyre Set Data Packet Information: \n";
+        for (TyreSetData tyreSetData : tyreSetDataList) {
+            string += tyreSetData.toString();
+            string += "\n-------------------\n";
+        }
+
+        return string;
+    }
 
 }
