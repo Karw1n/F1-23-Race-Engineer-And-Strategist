@@ -275,12 +275,18 @@ public class LapData extends Packet {
     }
 
     public String toString(){
-        String string = "Driver Name:" + driverName + "\nLastLapTimeInMS:" + lastLapTimeInMS + "\nCurrentLapTimeInMS:" + currentLapTimeInMS + "\nSector1TimeInMS:" + sector1TimeInMS
-                        + "\nSector1TimeMinutes:" + sector1TimeMinutes + "\nSector2TimeInMS:" + sector2TimeInMS + "\nSector2TimeMinutes:" + sector2TimeMinutes
-                        + "\nDeltaToCarInFrontInMS:" + deltaToCarInFrontInMS + "\nDeltaToRaceLeaderInMS:"  + deltaToRaceLeaderInMS 
-                        + "\nLapDistance:" + lapDistance + "\nTotalDistance:" + totalDistance + "\nSafetyCarDelta" + safetyCarDelta 
-                        + "\nCarPosition:" + carPosition + "\nCurrentLapNum:" + currentLapNum;
-        //Note not full toString
+        String string = 
+            "Driver Name:" + driverName + "\nLastLapTimeInMS:" + lastLapTimeInMS + "\nCurrentLapTimeInMS:" + currentLapTimeInMS + "\nSector1TimeInMS:" + sector1TimeInMS
+            + "\nSector1TimeMinutes:" + sector1TimeMinutes + "\nSector2TimeInMS:" + sector2TimeInMS + "\nSector2TimeMinutes:" + sector2TimeMinutes      
+            + "\nDeltaToCarInFrontInMS:" + deltaToCarInFrontInMS + "\nDeltaToRaceLeaderInMS:"  + deltaToRaceLeaderInMS         
+            + "\nLapDistance:" + lapDistance + "\nTotalDistance:" + totalDistance + "\nSafetyCarDelta" + safetyCarDelta 
+            + "\nCarPosition:" + carPosition + "\nCurrentLapNum:" + currentLapNum + "\nPit Status: " + pitStatus
+            + "\nNum Of Pit Stops: " + numPitStops + "\nSector: " + sector + "\nCurrent Lap Invalid: " + currentLapInvalid
+            + "\nPenalties: " + penalties + "\nTotal Warnings: " + totalWarnings + "\nCorner Cutting Warnings: " + cornerCuttingWarnings
+            + "\nNum Unserved Drive Through Pens: " + numUnservedDriveThroughPens + "\nNum Unserved Stop Go Pens: " + numUnservedStopGoPens 
+            + "\nGrid Position: " + gridPosition + "\nDriver Status: " + driverStatus + "\nResult Status: " + resultStatus 
+            + "\nPit Lane Timer Active: " + pitLaneTimerActive + "\nPit Lane Time In MS: " + pitLaneTimeInLaneInMS 
+            + "\nPit Stop Timer In Ms: " + pitStopTimerInMS + "\nPit Stop Should serve Pen: " + pitStopShouldServePen;
         return string;
     }
 
