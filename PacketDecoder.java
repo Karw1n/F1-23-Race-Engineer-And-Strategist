@@ -4,18 +4,22 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
+import data.PacketCarTelemetryData;
 import data.PacketLapData;
 import data.PacketParticipantData;
+import data.elements.CarTelemetryData;
 import data.elements.Header;
 import data.elements.LapData;
 import data.elements.Packet;
 import data.elements.ParticipantData;
+import data.elements.WheelData;
 
 public class PacketDecoder {
     
     private PacketBuffer packetBuffer;
     private PacketLapData lapDataPacket;
     private PacketParticipantData participantDataPacket;
+    private PacketCarTelemetryData carTelemetryDataPacket;
     private static List<String> drivers = new ArrayList<>();
 
     public PacketDecoder(byte[] data, PacketLapData lapDataPacket, PacketParticipantData participantDataPacket){
@@ -130,5 +134,59 @@ public class PacketDecoder {
         }
         this.participantDataPacket.setParticipantData(participantDataList);
         return participantDataPacket;
+    }
+
+    public Packet buildCarTelemetryPacket(Header header) {
+        List<CarTelemetryData> carTelemetryDataList = new ArrayList<>();
+        this.carTelemetryDataPacket.setHeader(header);
+
+        for (int i = 0; i < 20; i++) {
+            CarTelemetryData carTelemetryData = new CarTelemetryData();
+            carTelemetryData.setSpeed(packetBuffer.getNextUInt16AsInt());
+            carTelemetryData.setThrottle(packetBuffer.getNextFloat());
+            carTelemetryData.setSteer(packetBuffer.getNextFloat());
+            carTelemetryData.setBrake(packetBuffer.getNextFloat());
+            carTelemetryData.setClutch(packetBuffer.getNextUInt8AsInt());
+            carTelemetryData.setGear(packetBuffer.getNextInt8AsInt());
+            carTelemetryData.setEngineRPM(packetBuffer.getNextUInt16AsInt());
+            carTelemetryData.setDrs(packetBuffer.getNextInt8AsInt());
+            carTelemetryData.setRevLightsPercent(packetBuffer.getNextUInt16AsInt());
+            carTelemetryData.setRevLightsBitValue(packetBuffer.getNextUInt16AsInt());
+            int rl = packetBuffer.getNextUInt16AsInt();
+            int rr = packetBuffer.getNextUInt16AsInt();
+            int fl = packetBuffer.getNextUInt16AsInt();
+            int fr = packetBuffer.getNextUInt16AsInt();
+            WheelData<Integer> wheelData = new WheelData<>(rl, rr, fl, fr);
+            carTelemetryData.setBrakeTemperature(wheelData);
+            rl = packetBuffer.getNextUInt8AsInt();
+            rr = packetBuffer.getNextUInt8AsInt();
+            fl = packetBuffer.getNextUInt8AsInt();
+            fr = packetBuffer.getNextUInt8AsInt();
+            wheelData = new WheelData<>(rl, rr, fl, fr);
+            carTelemetryData.setTyresSurfaceTemperature(wheelData);
+            rl = packetBuffer.getNextUInt8AsInt();
+            rr = packetBuffer.getNextUInt8AsInt();
+            fl = packetBuffer.getNextUInt8AsInt();
+            fr = packetBuffer.getNextUInt8AsInt();
+            wheelData = new WheelData<>(rl, rr, fl, fr);
+            carTelemetryData.setTyresInnerTemperature(wheelData);
+            carTelemetryData.setEngineTemperature(packetBuffer.getNextUInt16AsInt());
+            float rl_pressure = packetBuffer.getNextFloat();
+            float rr_pressure = packetBuffer.getNextFloat();
+            float fl_pressure = packetBuffer.getNextFloat();
+            float fr_pressure = packetBuffer.getNextFloat();
+            WheelData<Float> wheelData2 = new WheelData<>(rl_pressure, rr_pressure, fl_pressure, fr_pressure);
+            carTelemetryData.setTyresPressure(wheelData2);
+            rl = packetBuffer.getNextUInt8AsInt();
+            rr = packetBuffer.getNextUInt8AsInt();
+            fl = packetBuffer.getNextUInt8AsInt();
+            fr = packetBuffer.getNextUInt8AsInt();
+            wheelData = new WheelData<>(rl, rr, fl, fr);
+            carTelemetryData.setSurfaceType(wheelData);
+            // might need to add rest of packet information
+        }
+
+        this.carTelemetryDataPacket.setCarTelemetryData(carTelemetryDataList);
+        return carTelemetryDataPacket;
     }
 }
