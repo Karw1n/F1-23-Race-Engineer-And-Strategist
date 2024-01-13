@@ -131,12 +131,12 @@ public class CarTelemetryData {
                 "\nDRS: "                       + drs +
                 "\nRev Lights Percent: "        + revLightsPercent +
                 "\nRev Lights Bit Value: "      + revLightsBitValue +
-                "\nBrakes Temperature: "        + brakeTemperature +
-                "\nTyres Surface Temperature: " + tyresSurfaceTemperature +
-                "\nTyres Inner Temperature: "   + tyresInnerTemperature +
+                "\nBrakes Temperature: "        + brakeTemperature.toString() +
+                "\nTyres Surface Temperature: " + tyresSurfaceTemperature.toString() +
+                "\nTyres Inner Temperature: "   + tyresInnerTemperature.toString() +
                 "\nEngine Temperature: "        + engineTemperature +
-                "\nTyres Pressure: "            + tyresPressure +
-                "\nSurface Type: "              + surfaceType;
+                "\nTyres Pressure: "            + tyresPressure.toString() +
+                "\nSurface Type: "              + surfaceType.toString();
     }
 
 }
