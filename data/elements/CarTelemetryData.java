@@ -3,6 +3,7 @@ package data.elements;
 import java.util.Arrays;
 
 public class CarTelemetryData {
+    private String driverName;
     private int speed;
     private float throttle;
     private float steer;
@@ -21,6 +22,14 @@ public class CarTelemetryData {
     private WheelData<Integer> surfaceType;
     
     public CarTelemetryData() {}
+
+    public String getDriverName() {
+        return driverName;
+    }
+
+    public void setDriverName(String driverName) {
+        this.driverName = driverName;
+    }
 
     public int getSpeed() {
         return speed;
@@ -121,22 +130,23 @@ public class CarTelemetryData {
 
     public String toString() {
         return
-            "Speed: "                           + speed +
-                "\nThrottle: "                  + throttle +
-                "\nSteer: "                     + steer +
-                "\nBrake: "                     + brake +
-                "\nClutch: "                    + clutch +
-                "\nGear: "                      + gear +
-                "\nEngine RPM: "                + engineRPM +
-                "\nDRS: "                       + drs +
-                "\nRev Lights Percent: "        + revLightsPercent +
-                "\nRev Lights Bit Value: "      + revLightsBitValue +
-                "\nBrakes Temperature: "        + brakeTemperature.toString() +
+                "Driver Name                :" + driverName +
+                "\nSpeed                    : "                     + speed +
+                "\nThrottle                 : "                  + throttle +
+                "\nSteer                    : "                     + steer +
+                "\nBrake                    : "                     + brake +
+                "\nClutch                   : "                    + clutch +
+                "\nGear                     : "                      + gear +
+                "\nEngine RPM               : "                + engineRPM +
+                "\nDRS                      : "                       + drs +
+                "\nRev Lights Percent       : "        + revLightsPercent +
+                "\nRev Lights Bit Value     : "      + revLightsBitValue +
+                "\nBrakes Temperature       : "        + brakeTemperature.toString() +
                 "\nTyres Surface Temperature: " + tyresSurfaceTemperature.toString() +
-                "\nTyres Inner Temperature: "   + tyresInnerTemperature.toString() +
-                "\nEngine Temperature: "        + engineTemperature +
-                "\nTyres Pressure: "            + tyresPressure.toString() +
-                "\nSurface Type: "              + surfaceType.toString();
+                "\nTyres Inner Temperature  : "   + tyresInnerTemperature.toString() +
+                "\nEngine Temperature       : "        + engineTemperature +
+                "\nTyres Pressure           : "            + tyresPressure.toString() +
+                "\nSurface Type             : "              + surfaceType.toString();
     }
 
 }
