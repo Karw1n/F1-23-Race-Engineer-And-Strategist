@@ -3,7 +3,7 @@ import java.util.List;
 import data.elements.CarTelemetryData;
 import data.elements.Packet;
 
-public class PacketCarTelemetryData {
+public class PacketCarTelemetryData extends Packet {
     private List<CarTelemetryData> CarTelemetryDataList;
 
     public void setCarTelemetryData(List<CarTelemetryData> CarTelemetryDataList){
