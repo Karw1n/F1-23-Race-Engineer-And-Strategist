@@ -4,16 +4,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
-import data.PacketCarTelemetryData;
-import data.PacketLapData;
-import data.PacketParticipantData;
-import data.elements.CarTelemetryData;
-import data.elements.Header;
-import data.elements.LapData;
-import data.elements.Packet;
-import data.elements.ParticipantData;
-import data.elements.WheelData;
-
 public class PacketDecoder {
     
     private PacketBuffer packetBuffer;
@@ -22,11 +12,14 @@ public class PacketDecoder {
     private PacketCarTelemetryData carTelemetryDataPacket;
     private static List<String> drivers = new ArrayList<>();
 
-    public PacketDecoder(byte[] data, PacketLapData lapDataPacket, PacketParticipantData participantDataPacket){
+    public PacketDecoder(byte[] data, PacketLapData lapDataPacket, PacketParticipantData participantDataPacket, PacketCarTelemetryData carTelemetryDataPacket){
         this.packetBuffer = PacketBuffer.wrap(data);
         this.lapDataPacket = lapDataPacket;
         this.participantDataPacket = participantDataPacket;
+        this.carTelemetryDataPacket =  carTelemetryDataPacket;
     }
+
+    
 
     public Packet buildPacket(){
 
@@ -49,6 +42,8 @@ public class PacketDecoder {
             return buildLapDataPacket(header);
         } else if (packetId == 4) {
             return buildParticipantsDataPacket(header);
+        } else if (packetId == 6) {
+            return buildCarTelemetryDataPacket(header);
         } else {
             Packet packet = new Packet();
             packet.setHeader(header);
@@ -136,12 +131,15 @@ public class PacketDecoder {
         return participantDataPacket;
     }
 
-    public Packet buildCarTelemetryPacket(Header header) {
+    public Packet buildCarTelemetryDataPacket(Header header) {
         List<CarTelemetryData> carTelemetryDataList = new ArrayList<>();
         this.carTelemetryDataPacket.setHeader(header);
 
         for (int i = 0; i < 20; i++) {
             CarTelemetryData carTelemetryData = new CarTelemetryData();
+            if (!(PacketDecoder.drivers.isEmpty())) {
+                carTelemetryData.setDriverName(PacketDecoder.drivers.get(i));
+            }
             carTelemetryData.setSpeed(packetBuffer.getNextUInt16AsInt());
             carTelemetryData.setThrottle(packetBuffer.getNextFloat());
             carTelemetryData.setSteer(packetBuffer.getNextFloat());
@@ -184,6 +182,7 @@ public class PacketDecoder {
             wheelData = new WheelData<>(rl, rr, fl, fr);
             carTelemetryData.setSurfaceType(wheelData);
             // might need to add rest of packet information
+            carTelemetryDataList.add(carTelemetryData);
         }
 
         this.carTelemetryDataPacket.setCarTelemetryData(carTelemetryDataList);
