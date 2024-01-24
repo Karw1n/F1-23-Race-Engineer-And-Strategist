@@ -9,10 +9,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
 
-import data.PacketLapData;
-import data.PacketParticipantData;
-import data.elements.Packet;
-
 public class Client{
     private DatagramSocket datagramSocket;
     private InetAddress inetAddress; // Server's IP address 
@@ -48,6 +44,7 @@ public class Client{
                 
                 socket.receive(packet);
                 
+                
                 // need to check if whole packet is being read
                 packetsReceived ++;
                 // Process the received data
@@ -57,8 +54,9 @@ public class Client{
                 ByteBuffer test = ByteBuffer.wrap(receivedData);
                 PacketLapData lapDataPacket = new PacketLapData();
                 PacketParticipantData participantDataPacket = new PacketParticipantData();
+                PacketCarTelemetryData carTelemetryDataPacket = new PacketCarTelemetryData();
                 
-                PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket);
+                PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket, carTelemetryDataPacket);
                 Packet somePacket = packetDecoder.buildPacket();
                 String stringToSave = somePacket.toString();
                 String fileNameLocation = "file.dat";
@@ -66,6 +64,9 @@ public class Client{
                     fileNameLocation = "lapData.dat"; 
                 } else if (somePacket.getHeader().getPacketId() == 4) {
                     fileNameLocation = "participantData.dat";
+                // }
+                } else if (somePacket.getHeader().getPacketId() == 6) {
+                    fileNameLocation = "carTelemetryData.dat";
                 }
                 
                 FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
@@ -85,38 +86,11 @@ public class Client{
                 String message = "PType: " +  (Integer.toString(packetType) + " Packet Size: " + (Integer.toString(packetLength)) + "[ "  + "  ]"  + "\n");
                 byte[] fileMessage = message.getBytes();
                 
-                // if (packetType == 1){
-                //     //Header
-                //     int packetFormat = packetBuffer.getNextUInt16AsInt();
-                //     int gameYear = packetBuffer.getNextUInt8AsInt();
-                //     int gameMajorVersion = packetBuffer.getNextUInt8AsInt();
-                //     int gameMinorVersion = packetBuffer.getNextUInt8AsInt();
-                //     int packetVersion = packetBuffer.getNextUInt8AsInt();
-                //     int packetID = packetBuffer.getNextUInt8AsInt();
-                //     BigInteger sessionUID = packetBuffer.getNextUInt64AsBigInteger();
-                //     float sessionTime = packetBuffer.getNextFloat();
-                //     long frameIdentifier = packetBuffer.getNextUIntAsLong();
-                //     long overallFrameIdentifier = packetBuffer.getNextUIntAsLong();
-                //     int playerCarIndex = packetBuffer.getNextInt8AsInt();
-                //     int secondayPlayerCarIndex = packetBuffer.getNextInt8AsInt();
-                //     int weather = packetBuffer.getNextInt8AsInt();
-                //     int trackTemperature = packetBuffer.getNextInt8AsInt();
-                //     System.out.println("PlayerCarIndex is: " + playerCarIndex);
-                //     System.out.println("Weather is: " + weather);
-                //     System.out.println("TrackTemp is: " + trackTemperature);
-                // }
-
+            
                 FileOutputStream outputStream = new FileOutputStream(fileName, true);
                 outputStream.write(fileMessage);
                 outputStream.close();
-
-
-                // System.out.println("PacketFormat: " + packetBuffer.getNextUInt16AsInt()); // 2
                 packetBuffer.getNextUInt16AsInt();
-		        // System.out.println("GameYear: " + packetBuffer.getNextUInt8AsInt());
-		        // System.out.println("GameMajorVersion: " + packetBuffer.getNextUInt8AsInt()); // 1
-		        // System.out.println("GameMinorVersion: " + packetBuffer.getNextUInt8AsInt()); // 1
-		        // System.out.println("PacketVersion: " + packetBuffer.getNextUInt8AsInt()); // 1
 		        packetBuffer.getNextUInt8AsInt();
                 packetBuffer.getNextUInt8AsInt();
                 packetBuffer.getNextUInt8AsInt();
@@ -128,27 +102,6 @@ public class Client{
                 long overallFrameIdentifier = packetBuffer.getNextUIntAsLong();
                 int playerCarIndex = packetBuffer.getNextInt8AsInt();
                 
-                
-                // System.out.println("PacketID: " + packetId); 
-		    
-                // System.out.println("SessionTime: " + sessionTime);
-		        // System.out.println("frameIdentifier: " + frameIdentifier);
-                // System.out.println("Player Car Index: " + playerCarIndex);
-		        
-                
-
-                // test.position(5);
-                // int packetId = 0xFF & test.getInt();
-                // System.out.println("Packet ID is: " + packetId);
-                // test.position(8);
-                // long sessionTime = 0xFFFFFFFFL & test.getLong();
-                // System.out.println("Overall Frame Identifier: " + sessionTime);
-                // Process the received data here
-                // FileOutputStream outputStream = new FileOutputStream(fileName);
-                // outputStream.write(receivedData);
-                // outputStream.close();
-                // //System.out.println("Data buffer has been written to the file in the current directory.");
-
                 switch (packetId) {
                     case 1:
                         noOfPacket1++;
