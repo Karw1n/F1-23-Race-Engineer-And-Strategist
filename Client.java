@@ -52,26 +52,32 @@ public class Client{
                 
                 PacketBuffer packetBuffer = new PacketBuffer(receivedData);
                 ByteBuffer test = ByteBuffer.wrap(receivedData);
-                PacketLapData lapDataPacket = new PacketLapData();
-                PacketParticipantData participantDataPacket = new PacketParticipantData();
-                PacketCarTelemetryData carTelemetryDataPacket = new PacketCarTelemetryData();
-                
-                PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket, carTelemetryDataPacket);
+               
+                //PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket, carTelemetryDataPacket);
+                PacketDecoder packetDecoder = new PacketDecoder(receivedData);
                 Packet somePacket = packetDecoder.buildPacket();
                 String stringToSave = somePacket.toString();
                 String fileNameLocation = "file.dat";
                 if (somePacket.getHeader().getPacketId() == 2) {
                     fileNameLocation = "lapData.dat"; 
-                } else if (somePacket.getHeader().getPacketId() == 4) {
+                } else if (somePacket.getHeader().getPacketId() == 3) { 
+                    fileNameLocation = "eventData.dat";
+                }else if (somePacket.getHeader().getPacketId() == 4) {
                     fileNameLocation = "participantData.dat";
                 // }
                 } else if (somePacket.getHeader().getPacketId() == 6) {
                     fileNameLocation = "carTelemetryData.dat";
-                }
+                } 
                 
-                FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
-                newOutputStream.write(stringToSave.getBytes());
-                newOutputStream.close();
+                if (somePacket.getHeader().getPacketId() != 3) {
+                    FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
+                    newOutputStream.write(stringToSave.getBytes());
+                    newOutputStream.close();
+                } else {
+                    FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation, true);
+                    newOutputStream.write(stringToSave.getBytes());
+                    newOutputStream.close();
+                }
 
                 test.order(ByteOrder.LITTLE_ENDIAN);
                 
@@ -90,67 +96,6 @@ public class Client{
                 FileOutputStream outputStream = new FileOutputStream(fileName, true);
                 outputStream.write(fileMessage);
                 outputStream.close();
-                packetBuffer.getNextUInt16AsInt();
-		        packetBuffer.getNextUInt8AsInt();
-                packetBuffer.getNextUInt8AsInt();
-                packetBuffer.getNextUInt8AsInt();
-                packetBuffer.getNextUInt8AsInt();
-                int packetId = packetBuffer.getNextUInt8AsInt();
-                packetBuffer.getNextUInt64AsBigInteger();
-                float sessionTime = packetBuffer.getNextFloat();
-                long frameIdentifier = packetBuffer.getNextUIntAsLong();
-                long overallFrameIdentifier = packetBuffer.getNextUIntAsLong();
-                int playerCarIndex = packetBuffer.getNextInt8AsInt();
-                
-                switch (packetId) {
-                    case 1:
-                        noOfPacket1++;
-                        break;
-                    case 2:
-                        noOfPacket2++;
-                        break;
-                    case 3:
-                        noOfPacket3++;
-                        break;
-                    case 4:
-                        noOfPacket4++;
-                        break;
-                    case 5:
-                        noOfPacket5++;
-                        break;
-                    case 6:
-                        noOfPacket6++;
-                        break;
-                    
-                    case 7:
-                        noOfPacket7++;
-                        break;
-                    case 8:
-                        noOfPacket8++;
-                        break;
-                    case 9:
-                        noOfPacket9++;
-                        break;
-                    case 10:
-                        noOfPacket10++;
-                        break;
-                    
-                    case 11:
-                        noOfPacket11++;
-                        break;
-                    case 12:
-                        noOfPacket12++;
-                        break;
-                }
-
-                // System.out.println("Amount of packets: " + packetsReceived);
-                // System.out.println(" ");
-                // System.out.print("Packet 1 count: " + noOfPacket1); System.out.print(" Packet 2 count: " + noOfPacket2); System.out.print(" Packet 3 count: " + noOfPacket3);
-                // System.out.print("\nPacket 4 count: " + noOfPacket4); System.out.print(" Packet 5 count: " + noOfPacket5); System.out.print(" Packet 6 count: " + noOfPacket6);
-                // System.out.print("\nPacket 7 count: " + noOfPacket7); System.out.print(" Packet 8 count: " + noOfPacket8); System.out.print(" Packet 9 count: " + noOfPacket9);
-                //  System.out.print("\nPacket 10 count: " + noOfPacket10);  System.out.print(" Packet 11 count: " + noOfPacket11); System.out.print(" Packet 12 count: " + noOfPacket12);
-                // System.out.println("");
-                // System.out.println("-------------------------------------------------------------------------------------------------------");
             }
 
         } catch (Exception e) {
