@@ -11,10 +11,11 @@ public class RaceEngineer {
     
     public String radio(String question) {
         // decode question
-        String dataToObtain = processQuery(question);
-        String dataToFormat = retrieveData(dataToObtain);
-        
-        return dataToFormat;
+        String query = processQuery(question);
+        String data = retrieveData(query);
+        String response = getResponseData(query, data);
+
+        return response;
     }
 
     public String processQuery(String query) {
@@ -34,24 +35,23 @@ public class RaceEngineer {
         } else if (query.contains("position")) {
             //@TODO fix this so it follows new structure
             // This condition is that the user asks about their current position
-            if (query.contains("current") && query.contains("my")) {
-                return "user.CarPosition";
+            if (query.contains("current") || query.contains("my")) {
+                return "user.carPosition";
             // This condition is that the user asks about another drivers position
             // If the user asks an invalid name it will return the user
             } else {
-                String returnQuery = "CarPosition";
+                String returnQuery = "user.carPosition";
                 String[] wordsInMessage = query.split("\\s+");
                 for (String string : wordsInMessage) {
                     for (String name : fileReader.getDriverList()) {
                         if ((string == name)) {
                             returnQuery += "." + name;
                         }
-                        
                     }
                 }
                 return returnQuery;
             }
-        }
+        } else if {} // @TODO implement lap time queries
 
         return null;
     }
@@ -76,13 +76,26 @@ public class RaceEngineer {
     }
 
 
-    public String getResponseData(String question) {
-        String answer = "";
-        if (question.contains("current") && question.contains("position")) {
-            // Call the getCurrentPosition function
-            answer = String.valueOf(fileReader.getCarPosition());
+    public String getResponseData(String aQuery, String someData) {
+        String[] query = aQuery.split("\\.");
+        if (query.length == 3) {
+            if (query[1].equals("deltaTo")) {
+                if (query[0].equals(fileReader.getUsername())) {
+                    return "Time to " + query[2] + " is " + someData + " seconds.";
+                } else {
+                    return "The gap between " + query[0] + " and " + query[2] + " is " + someData + " seconds."; 
+                }
+            }
+        } else if (query.length == 2) {
+            if (query[1].equals("carPosition")) {
+                if (query[0].equals(fileReader.getUsername())) {
+                    return "You're currently P" + someData;
+                } else {
+                    return query[0] + " is currently P" + someData;
+                }
+            }
         }
-        return answer;
+        return null;
     }
 
     public String findDriverNameInSentence(String sentence) {
