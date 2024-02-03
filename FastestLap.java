@@ -27,5 +27,11 @@ public class FastestLap {
     }
 
     //@TODO implement ToString
+    public String toString() {
+        String string = 
+          "Driver Name : " + driverName +
+        "\nLap Time    : " + lapTime;
+        return string; 
+    }
 
 }

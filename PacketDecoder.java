@@ -10,7 +10,15 @@ public class PacketDecoder {
     private PacketLapData lapDataPacket;
     private PacketParticipantData participantDataPacket;
     private PacketCarTelemetryData carTelemetryDataPacket;
+    private PacketEventData eventDataPacket;
     private static List<String> drivers = new ArrayList<>();
+
+    public PacketDecoder(byte[] data) {
+        this.packetBuffer = PacketBuffer.wrap(data);
+        this.lapDataPacket = new PacketLapData();
+        this.participantDataPacket = new PacketParticipantData();
+        this.carTelemetryDataPacket =  new PacketCarTelemetryData();
+    }
 
     public PacketDecoder(byte[] data, PacketLapData lapDataPacket, PacketParticipantData participantDataPacket, PacketCarTelemetryData carTelemetryDataPacket){
         this.packetBuffer = PacketBuffer.wrap(data);
@@ -18,8 +26,6 @@ public class PacketDecoder {
         this.participantDataPacket = participantDataPacket;
         this.carTelemetryDataPacket =  carTelemetryDataPacket;
     }
-
-    
 
     public Packet buildPacket(){
 
@@ -40,6 +46,8 @@ public class PacketDecoder {
 
         if (packetId == 2) {
             return buildLapDataPacket(header);
+        } else if (packetId == 3) {
+            return buildEventDataPacket(header);
         } else if (packetId == 4) {
             return buildParticipantsDataPacket(header);
         } else if (packetId == 6) {
@@ -187,5 +195,23 @@ public class PacketDecoder {
 
         this.carTelemetryDataPacket.setCarTelemetryData(carTelemetryDataList);
         return carTelemetryDataPacket;
+    }
+
+    public Packet buildEventDataPacket(Header header) {
+        this.eventDataPacket = new PacketEventData();
+        this.eventDataPacket.setHeader(header);
+
+        eventDataPacket.setEventStringCode(packetBuffer.getNextCharArrayAsString(4));
+        if (eventDataPacket.getEventStringCode().equals("FTLP")) {
+            FastestLap fastestLapData = new FastestLap();
+            fastestLapData.setVehicleIdx(packetBuffer.getNextInt8AsInt());
+            if (!(PacketDecoder.drivers.isEmpty())) {
+                fastestLapData.setDriverName(PacketDecoder.drivers.get(fastestLapData.getVehicleIdx()));
+            }
+            fastestLapData.setLapTime(packetBuffer.getNextFloat());
+
+            eventDataPacket.setFastestLap(fastestLapData);
+        }
+        return eventDataPacket;
     }
 }

@@ -26,10 +26,7 @@ public class Client{
         int bufferSize = 5000;
         byte[] buffer = new byte[bufferSize];
         String fileName = "file.dat";
-        int packetsReceived = 0;
-        int noOfPacket1 = 0; int noOfPacket2 = 0; int noOfPacket3 = 0; int noOfPacket4 = 0; int noOfPacket5 = 0; int noOfPacket6 = 0;
-        int noOfPacket7 = 0; int noOfPacket8 = 0; int noOfPacket9 = 0; int noOfPacket10 = 0; int noOfPacket11 = 0; int noOfPacket12 = 0;
-
+      
         
         
         
@@ -45,13 +42,14 @@ public class Client{
                 socket.receive(packet);
                 
                 
-                // need to check if whole packet is being read
-                packetsReceived ++;
+                
                 // Process the received data
                 byte[] receivedData = packet.getData();
                 
                 PacketBuffer packetBuffer = new PacketBuffer(receivedData);
                 ByteBuffer test = ByteBuffer.wrap(receivedData);
+
+                
                
                 //PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket, carTelemetryDataPacket);
                 PacketDecoder packetDecoder = new PacketDecoder(receivedData);
@@ -69,12 +67,16 @@ public class Client{
                     fileNameLocation = "carTelemetryData.dat";
                 } 
                 
+                
+
                 if (somePacket.getHeader().getPacketId() != 3) {
+                    
                     FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
                     newOutputStream.write(stringToSave.getBytes());
                     newOutputStream.close();
                 } else {
                     FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation, true);
+                    
                     newOutputStream.write(stringToSave.getBytes());
                     newOutputStream.close();
                 }
