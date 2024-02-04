@@ -27,9 +27,6 @@ public class Client{
         byte[] buffer = new byte[bufferSize];
         String fileName = "file.dat";
       
-        
-        
-        
         try {
             InetAddress gameInetAddress = InetAddress.getByName(ip);
             socket = new DatagramSocket(port, gameInetAddress);

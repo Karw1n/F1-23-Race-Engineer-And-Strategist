@@ -3,7 +3,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Scanner;
 
 public class FileReader{
     private String carTelemetryDataFile = "carTelemetry.dat";
@@ -12,7 +14,9 @@ public class FileReader{
     private static List<String> drivers = new ArrayList<>();
     private String username;
 
-    public FileReader() {}
+    public FileReader() {
+        this.setDriversList();
+    }
 
     public void setDriversList() {
         try (FileInputStream fileInputStream = new FileInputStream(this.participantDataFile);
@@ -67,55 +71,11 @@ public class FileReader{
     }
 
     public Integer getCarPosition() {
-        int carPositionAsInt = 0;
-        try (FileInputStream fileInputStream = new FileInputStream(this.lapDataFile);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    if (line.contains("Driver Name") && line.contains(this.username)) {
-                        while ((line = bufferedReader.readLine()) != null) {          
-                            if (line.trim().startsWith("CarPosition")) {                
-                                String[] parts = line.split(":");
-                                if (parts.length == 2) {
-                                    String carPosition = parts[1].trim();
-                                    carPositionAsInt = Integer.parseInt(carPosition); 
-                                    break;
-                                }
-                            }
-                        }    
-                    }
-                }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return carPositionAsInt;
+        return Integer.parseInt(improvedFunction("CarPosition"));
     }
 
     public Integer getCarPosition(String driverName) {
-        int carPositionAsInt = 0;
-        try (FileInputStream fileInputStream = new FileInputStream(this.lapDataFile);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    if (line.contains("Driver Name") && line.contains(driverName)) {
-                        while ((line = bufferedReader.readLine()) != null) {          
-                            if (line.trim().startsWith("CarPosition")) {                
-                                String[] parts = line.split(":");
-                                if (parts.length == 2) {
-                                    String carPosition = parts[1].trim();
-                                    carPositionAsInt = Integer.parseInt(carPosition); 
-                                    break;
-                                }
-                            }
-                        }    
-                    }
-                }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return carPositionAsInt;
+        return Integer.parseInt(improvedFunction("CarPosition", driverName));
     }
 
     public String getDriver(int position) {
@@ -137,8 +97,7 @@ public class FileReader{
                                         return (driverName);
                                     } else {
                                         break;
-                                    }
-                                    
+                                    }  
                                 }
                             }
                         }    
@@ -147,56 +106,23 @@ public class FileReader{
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         return driverName;
     }
     
-    public Integer getDeltaToCarInFront() {
-        try (FileInputStream fileInputStream = new FileInputStream(this.lapDataFile);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    if (line.contains("Driver Name") && line.contains(this.username)) {
-                        while ((line = bufferedReader.readLine()) != null) {          
-                            if (line.trim().startsWith("DeltaToCarInFrontInMS")) {                
-                                String[] parts = line.split(":");
-                                if (parts.length == 2) {
-                                    String deltaToCarInFront = parts[1].trim();
-                                    return (Integer.parseInt(deltaToCarInFront)/1000); 
-                                }
-                            }
-                        }    
-                    }
-                }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public float getDeltaToCarInFront() {
+        return Integer.parseInt(improvedFunction("DeltaToCarInFrontInMS"))/1000;
     }
 
-    public Integer getDeltaToRaceLeader(String fromDriver) {
-        try (FileInputStream fileInputStream = new FileInputStream(this.lapDataFile);
-             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
-             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
-                String line;
-                while ((line = bufferedReader.readLine()) != null) {
-                    if (line.contains("Driver Name") && line.contains(fromDriver)) {
-                        while ((line = bufferedReader.readLine()) != null) {          
-                            if (line.trim().startsWith("DeltaToRaceLeaderInMS")) {                
-                                String[] parts = line.split(":");
-                                if (parts.length == 2) {
-                                    String deltaToDraceLeader = parts[1].trim();
-                                    return (Integer.parseInt(deltaToDraceLeader)/1000); 
-                                }
-                            }
-                        }    
-                    }
-                }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+    public float getDeltaToCarInFront(String driver) {
+        return Integer.parseInt(improvedFunction("DeltaToCarInFrontInMS", driver))/1000;
+    }
+
+    public float getDeltaToRaceLeader(String fromDriver) {
+        return Integer.parseInt(improvedFunction("DeltaToRaceLeaderInMs", fromDriver))/1000;
+    }
+
+    public float getDeltaToRaceLeader() {
+        return Integer.parseInt(improvedFunction("DeltaToRaceLeaderInMs"))/1000;   
     }
     
     public float getDeltaToDriver(String driver) {
@@ -263,7 +189,7 @@ public class FileReader{
     public static void main(String[] args) throws IOException { 
         FileReader fileReader = new FileReader();
 
-        fileReader.setDriversList();
+        //fileReader.setDriversList();
         // for (String string : fileReader.getDriverList()) {
         //     System.out.println(string);
         // }

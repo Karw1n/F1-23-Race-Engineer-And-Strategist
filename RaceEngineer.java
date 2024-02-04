@@ -1,3 +1,6 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class RaceEngineer {
     private String driverName;
     private FileReader fileReader;
@@ -12,6 +15,9 @@ public class RaceEngineer {
     public String radio(String question) {
         // decode question
         String query = processQuery(question);
+        if (query.equals("INVALID QUERY")) {
+            return "INVALID QUERY";
+        }
         String data = retrieveData(query);
         String response = getResponseData(query, data);
 
@@ -41,17 +47,14 @@ public class RaceEngineer {
             // If the user asks an invalid name it will return the user
             } else {
                 String returnQuery = "user.carPosition";
-                String[] wordsInMessage = query.split("\\s+");
-                for (String string : wordsInMessage) {
-                    for (String name : fileReader.getDriverList()) {
-                        if ((string == name)) {
-                            returnQuery += "." + name;
-                        }
-                    }
+                String driverName = findDriverNameInSentence(query);
+                if (driverName != null) {
+                    return returnQuery + "." + driverName;
+                } else {
+                    return returnQuery;
                 }
-                return returnQuery;
             }
-        } else if {} // @TODO implement lap time queries
+        } // } else if {} // @TODO implement lap time queries
 
         return null;
     }
@@ -70,6 +73,12 @@ public class RaceEngineer {
                 } else {
                     return Float.toString(fileReader.getDeltaToDriver(dataWanted[2]));
                 } 
+            }
+        } else if (dataWanted[1].equals("carPosition")) {
+            if (dataWanted.length == 3) {
+                return Integer.toString(fileReader.getCarPosition(dataWanted[2]));
+            } else {
+                return Integer.toString(fileReader.getCarPosition());
             }
         }
         return null;
@@ -110,6 +119,54 @@ public class RaceEngineer {
         return null;
     }
 
+    public void interactionMenu(int input) {
+        boolean exit = false;
+        while (!exit) {
+            System.out.println(
+            "How can I help?\nOption 1: Default Query\nOption 2: Custom Query\nOption 3: Exit");
+            
+            int option = getValidOption();
+
+
+
+       
+
+        }
+    }
+
+    public String defualtQueryMenu() {
+        // @TODO create a list of queries
+        System.out.println("");
+    }
+
+    public int getValidOption() {
+        Scanner scanner = new Scanner(System.in);
+        int input;
+
+        do {
+            try {
+                System.out.print("Enter option number:");
+                input = scanner.nextInt();
+
+                // Check if the entered integer is in the specified range
+                if (input >=1 && input <=3) {
+                    // If in range, return the integer
+                    break;
+                } else {
+                    // If not in range, display an error message
+                    System.out.println("Invalid input. Please enter the option number you wish to select.");
+                }
+            } catch (InputMismatchException e) {
+                // If an invalid input is caught, display an error message
+                System.out.println("Invalid input. Please enter a valid integer.");
+                scanner.nextLine();
+                input = -1; // Assigning a dummy value to input to continue the loop
+            }
+        } while (true);
+        scanner.close();
+        return input;
+    }
+
     public static void main(String[] args) {
         FileReader fileReader = new FileReader();
         fileReader.setDriversList();
@@ -118,4 +175,5 @@ public class RaceEngineer {
 
         System.out.println(jeff.radio("What is time to HAMILTON?"));
     }
+        
 }
