@@ -1,0 +1,660 @@
+Lap Data Packet:
+-------------------
+Driver Name                      : RICCIARDO
+LastLapTimeInMS                  : 110174
+CurrentLapTimeInMS               : 9000
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 0
+DeltaToRaceLeaderInMS            : 0
+LapDistance                      : 363.09766
+TotalDistance                    : 38286.52
+SafetyCarDelta                   : -0.0
+CarPosition                      : 18
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 17
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : STROLL
+LastLapTimeInMS                  : 93557
+CurrentLapTimeInMS               : 12683
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 317
+DeltaToRaceLeaderInMS            : 27900
+LapDistance                      : 809.2031
+TotalDistance                    : 38732.625
+SafetyCarDelta                   : -0.0
+CarPosition                      : 14
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 3
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : HAMILTON
+LastLapTimeInMS                  : 108594
+CurrentLapTimeInMS               : 17333
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 583
+DeltaToRaceLeaderInMS            : 28450
+LapDistance                      : 783.4414
+TotalDistance                    : 38706.863
+SafetyCarDelta                   : -0.0
+CarPosition                      : 15
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 9
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : MAGNUSSEN
+LastLapTimeInMS                  : 109902
+CurrentLapTimeInMS               : 12266
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 1600
+DeltaToRaceLeaderInMS            : 33483
+LapDistance                      : 520.5742
+TotalDistance                    : 38443.996
+SafetyCarDelta                   : -0.0
+CarPosition                      : 17
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 14
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : ALBON
+LastLapTimeInMS                  : 111362
+CurrentLapTimeInMS               : 8683
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 0
+DeltaToRaceLeaderInMS            : 0
+LapDistance                      : 340.60547
+TotalDistance                    : 38264.027
+SafetyCarDelta                   : -0.0
+CarPosition                      : 19
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 15
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : P??REZ
+LastLapTimeInMS                  : 109074
+CurrentLapTimeInMS               : 18449
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 700
+DeltaToRaceLeaderInMS            : 27584
+LapDistance                      : 821.8242
+TotalDistance                    : 38745.246
+SafetyCarDelta                   : -0.0
+CarPosition                      : 13
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 10
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : PIASTRI
+LastLapTimeInMS                  : 108859
+CurrentLapTimeInMS               : 19083
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 1983
+DeltaToRaceLeaderInMS            : 26867
+LapDistance                      : 855.6758
+TotalDistance                    : 38779.098
+SafetyCarDelta                   : -0.0
+CarPosition                      : 12
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 8
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : OCON
+LastLapTimeInMS                  : 111128
+CurrentLapTimeInMS               : 13883
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 3650
+DeltaToRaceLeaderInMS            : 32033
+LapDistance                      : 586.9531
+TotalDistance                    : 38510.375
+SafetyCarDelta                   : -0.0
+CarPosition                      : 16
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 12
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : HULKENBERG
+LastLapTimeInMS                  : 90372
+CurrentLapTimeInMS               : 31279
+Sector1TimeInMS                  : 29946
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 3566
+DeltaToRaceLeaderInMS            : 9800
+LapDistance                      : 1895.1953
+TotalDistance                    : 39818.617
+SafetyCarDelta                   : -0.0
+CarPosition                      : 3
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 1
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 11
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : NORRIS
+LastLapTimeInMS                  : 89926
+CurrentLapTimeInMS               : 40542
+Sector1TimeInMS                  : 29408
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 0
+DeltaToRaceLeaderInMS            : 0
+LapDistance                      : 2332.3828
+TotalDistance                    : 40255.805
+SafetyCarDelta                   : -0.0
+CarPosition                      : 1
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 1
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 5
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : GASLY
+LastLapTimeInMS                  : 90045
+CurrentLapTimeInMS               : 34571
+Sector1TimeInMS                  : 29671
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 6234
+DeltaToRaceLeaderInMS            : 6234
+LapDistance                      : 2005.2266
+TotalDistance                    : 39928.65
+SafetyCarDelta                   : -0.0
+CarPosition                      : 2
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 1
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 13
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : ZHOU
+LastLapTimeInMS                  : 110363
+CurrentLapTimeInMS               : 7583
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 0
+DeltaToRaceLeaderInMS            : 0
+LapDistance                      : 266.0039
+TotalDistance                    : 38189.426
+SafetyCarDelta                   : -0.0
+CarPosition                      : 20
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 20
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : LECLERC
+LastLapTimeInMS                  : 110375
+CurrentLapTimeInMS               : 21316
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 1283
+DeltaToRaceLeaderInMS            : 24533
+LapDistance                      : 978.3242
+TotalDistance                    : 38901.746
+SafetyCarDelta                   : -0.0
+CarPosition                      : 10
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 4
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : VERSTAPPEN
+LastLapTimeInMS                  : 93302
+CurrentLapTimeInMS               : 24633
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 1733
+DeltaToRaceLeaderInMS            : 14916
+LapDistance                      : 1609.9102
+TotalDistance                    : 39533.332
+SafetyCarDelta                   : -0.0
+CarPosition                      : 7
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 1
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : SAINZ
+LastLapTimeInMS                  : 92223
+CurrentLapTimeInMS               : 16983
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 7017
+DeltaToRaceLeaderInMS            : 23267
+LapDistance                      : 1063.3711
+TotalDistance                    : 38986.793
+SafetyCarDelta                   : -0.0
+CarPosition                      : 9
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 7
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : ALONSO
+LastLapTimeInMS                  : 109249
+CurrentLapTimeInMS               : 20966
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 317
+DeltaToRaceLeaderInMS            : 24850
+LapDistance                      : 959.71484
+TotalDistance                    : 38883.137
+SafetyCarDelta                   : -0.0
+CarPosition                      : 11
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 2
+Driver Status                    : 3
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : BOTTAS
+LastLapTimeInMS                  : 90259
+CurrentLapTimeInMS               : 28149
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 967
+DeltaToRaceLeaderInMS            : 12734
+LapDistance                      : 1726.4062
+TotalDistance                    : 39649.83
+SafetyCarDelta                   : -0.0
+CarPosition                      : 5
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 19
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : TSUNODA
+LastLapTimeInMS                  : 90591
+CurrentLapTimeInMS               : 29333
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 2033
+DeltaToRaceLeaderInMS            : 11800
+LapDistance                      : 1784.3164
+TotalDistance                    : 39707.74
+SafetyCarDelta                   : -0.0
+CarPosition                      : 4
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 18
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : SARGEANT
+LastLapTimeInMS                  : 91584
+CurrentLapTimeInMS               : 24649
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 1300
+DeltaToRaceLeaderInMS            : 16400
+LapDistance                      : 1526.3984
+TotalDistance                    : 39449.82
+SafetyCarDelta                   : -0.0
+CarPosition                      : 8
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 0
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 0
+Total Warnings                   : 0
+Corner Cutting Warnings          : 0
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 16
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------
+
+-------------------
+Driver Name                      : RUSSELL
+LastLapTimeInMS                  : 91418
+CurrentLapTimeInMS               : 26199
+Sector1TimeInMS                  : 0
+Sector1TimeMinutes               : 0
+Sector2TimeInMS                  : 0
+Sector2TimeMinutes               : 0
+DeltaToCarInFrontInMS            : 350
+DeltaToRaceLeaderInMS            : 12984
+LapDistance                      : 1714.7031
+TotalDistance                    : 39638.125
+SafetyCarDelta                   : -0.0
+CarPosition                      : 6
+CurrentLapNum                    : 8
+Pit Status                       : 0
+Num Of Pit Stops                 : 1
+Sector                           : 0
+Current Lap Invalid              : 0
+Penalties                        : 3
+Total Warnings                   : 5
+Corner Cutting Warnings          : 5
+Num Unserved Drive Through Pens  : 0
+Num Unserved Stop Go Pens        : 0
+Grid Position                    : 6
+Driver Status                    : 4
+Result Status                    : 2
+Pit Lane Timer Active            : 0
+Pit Lane Time In MS              : 0
+Pit Stop Timer In Ms             : 0
+Pit Stop Should serve Pen        : 0
+-------------------

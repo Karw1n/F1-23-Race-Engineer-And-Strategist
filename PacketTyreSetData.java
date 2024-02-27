@@ -2,8 +2,9 @@
 
 import java.util.List;
 
-public class PacketTyreSetData {
+public class PacketTyreSetData extends Packet{
     private List<TyreSetData> tyreSetDataList;
+    private String driver;
     private int carIdx;
     private int fittedIdx;
 
@@ -13,6 +14,14 @@ public class PacketTyreSetData {
 
     public List<TyreSetData> getTyreSetDataList() {
         return tyreSetDataList;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
+    }
+
+    public String getDriver() {
+        return driver;
     }
 
     public void setCarIdx(int carIdx) {
@@ -33,11 +42,13 @@ public class PacketTyreSetData {
 
     public String toString() {
         String string = "Tyre Set Data Packet Information: \n";
+        string += "Driver Name            : " + driver + "\n";
+        string += "-------------------\n";
         for (TyreSetData tyreSetData : tyreSetDataList) {
-            string += tyreSetData.toString();
-            string += "\n-------------------\n";
+            string += tyreSetData.toString() + "\n";
+            string += "-------------------\n";
         }
-
+        string += "\n-------------------\n";
         return string;
     }
 

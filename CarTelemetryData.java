@@ -1,7 +1,4 @@
 
-
-import java.util.Arrays;
-
 public class CarTelemetryData {
     private String driverName;
     private int speed;

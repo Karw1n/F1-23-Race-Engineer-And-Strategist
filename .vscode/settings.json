@@ -1,0 +1,8 @@
+{
+    "maven.view": "hierarchical",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\akbba\\Downloads\\sphinx4-core-5prealpha-20160628.232526-10.jar",
+        "c:\\Users\\akbba\\Downloads\\sphinx4-data-5prealpha-20160628.232535-10.jar"
+    ]
+}

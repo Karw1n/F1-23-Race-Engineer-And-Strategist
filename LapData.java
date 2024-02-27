@@ -274,7 +274,7 @@ public class LapData extends Packet {
         this.pitStopShouldServePen = pitStopShouldServePen;
     }
 
-    public String toString(){
+    public String toString() {
         String string = 
             "Driver Name                      : " + driverName + 
             "\nLastLapTimeInMS                  : " + lastLapTimeInMS + 

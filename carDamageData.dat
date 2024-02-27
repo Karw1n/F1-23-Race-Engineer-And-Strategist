@@ -1,0 +1,500 @@
+Car Damage Data Packet:
+-------------------
+Driver Name            : RICCIARDO
+Tyres Wear             : 0.06720921
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : STROLL
+Tyres Wear             : 4.0025754
+Tyres Damage           : 3.5
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : HAMILTON
+Tyres Wear             : 0.42917848
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : MAGNUSSEN
+Tyres Wear             : 0.14609767
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : ALBON
+Tyres Wear             : 0.061031315
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : P??REZ
+Tyres Wear             : 0.26023936
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : PIASTRI
+Tyres Wear             : 0.3605324
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : OCON
+Tyres Wear             : 0.18719085
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : HULKENBERG
+Tyres Wear             : 28.593138
+Tyres Damage           : 28.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : NORRIS
+Tyres Wear             : 28.1557
+Tyres Damage           : 27.75
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : GASLY
+Tyres Wear             : 28.094723
+Tyres Damage           : 27.75
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : ZHOU
+Tyres Wear             : 0.05478266
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : LECLERC
+Tyres Wear             : 0.4676861
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : VERSTAPPEN
+Tyres Wear             : 4.571807
+Tyres Damage           : 4.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : SAINZ
+Tyres Wear             : 4.83107
+Tyres Damage           : 4.25
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : ALONSO
+Tyres Wear             : 0.5626604
+Tyres Damage           : 0.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : BOTTAS
+Tyres Wear             : 27.897139
+Tyres Damage           : 27.25
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : TSUNODA
+Tyres Wear             : 26.443142
+Tyres Damage           : 26.0
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : SARGEANT
+Tyres Wear             : 24.856937
+Tyres Damage           : 24.25
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 0
+Engine Damage          : 0
+MGUH Wear              : 0
+ES Wear                : 0
+CE Wear                : 0
+ICE Wear               : 0
+MGUK Wear              : 0
+TC Wear                : 0
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------
+
+-------------------
+Driver Name            : RUSSELL
+Tyres Wear             : 6.922765
+Tyres Damage           : 6.5
+Brakes Damage          : 0.0
+Front Left Wing Damage : 0
+Front Right Wing Damage: 0
+Rear Wing Damage       : 0
+Floor Damage           : 0
+Diffuser Damage        : 0
+Sidepod Damage         : 0
+DRS Fault              : 0
+ERS Fault              : 0
+Gearbox Damage         : 3
+Engine Damage          : 2
+MGUH Wear              : 3
+ES Wear                : 1
+CE Wear                : 2
+ICE Wear               : 3
+MGUK Wear              : 1
+TC Wear                : 2
+Engine Blown           : 0
+Engine Seized          : 0
+-------------------

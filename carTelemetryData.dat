@@ -1,0 +1,400 @@
+Car Telemetry Data Packet:
+-------------------
+Driver Name              : RICCIARDO
+Speed                    : 262
+Throttle                 : 1.0
+Steer                    : -0.023332391
+Brake                    : 0.0
+Clutch                   : 0
+Gear                     : 6
+Engine RPM               : 12043
+DRS                      : 0
+Rev Lights Percent       : 57444
+Rev Lights Bit Value     : 16255
+Brakes Temperature       : 20737, 18433, 16130, 20738
+Tyres Surface Temperature: 72, 78, 74, 73
+Tyres Inner Temperature  : 75, 110, 79, 75
+Engine Temperature       : 26112
+Tyres Pressure           : -4.0058158E-23, 6.034452E-39, 2.2860311E23, -4.004265E-23
+Surface Type             : 0, 154, 0, 0
+-------------------
+
+-------------------
+Driver Name              : STROLL
+Speed                    : 43776
+Throttle                 : 1.4382672E25
+Steer                    : 1.750704E-38
+Brake                    : 0.0
+Clutch                   : 4
+Gear                     : -3
+Engine RPM               : 36
+DRS                      : 0
+Rev Lights Percent       : 0
+Rev Lights Bit Value     : 823
+Brakes Temperature       : 774, 23645, 823, 772
+Tyres Surface Temperature: 100, 100, 97, 97
+Tyres Inner Temperature  : 110, 0, 100, 100
+Engine Temperature       : 26214
+Tyres Pressure           : -1.5949766E-23, 2.3571E-41, 2.7183875E23, -1.5949736E-23
+Surface Type             : 164, 0, 0, 0
+-------------------
+
+-------------------
+Driver Name              : HAMILTON
+Speed                    : 0
+Throttle                 : 1.1141833E22
+Steer                    : -1.4890414E-18
+Brake                    : 6.029991E-36
+Clutch                   : 244
+Gear                     : 33
+Engine RPM               : 0
+DRS                      : 0
+Rev Lights Percent       : 15616
+Rev Lights Bit Value     : 16131
+Brakes Temperature       : 21763, 22867, 5635, 6659
+Tyres Surface Temperature: 80, 78, 93, 81
+Tyres Inner Temperature  : 0, 102, 78, 110
+Engine Temperature       : 41574
+Tyres Pressure           : -1.1444282E-6, 9.1E-44, -3.1224945E-18, -1.1444282E-6
+Surface Type             : 0, 163, 0, 131
+-------------------
+
+-------------------
+Driver Name              : MAGNUSSEN
+Speed                    : 51944
+Throttle                 : -1.3388401E-30
+Steer                    : 8.7E-44
+Brake                    : 2.25056286E12
+Clutch                   : 38
+Gear                     : 0
+Engine RPM               : 0
+DRS                      : 0
+Rev Lights Percent       : 834
+Rev Lights Bit Value     : 832
+Brakes Temperature       : 19278, 20820, 810, 808
+Tyres Surface Temperature: 75, 75, 79, 79
+Tyres Inner Temperature  : 102, 102, 110, 0
+Engine Temperature       : 16802
+Tyres Pressure           : 22.7, 0.0, 20.3, 22.7
+Surface Type             : 0, 0, 3, 1
+-------------------
+
+-------------------
+Driver Name              : ALBON
+Speed                    : 16256
+Throttle                 : -0.018369092
+Steer                    : 0.0
+Brake                    : 4.0505793E-13
+Clutch                   : 0
+Gear                     : 0
+Engine RPM               : 0
+DRS                      : 70
+Rev Lights Percent       : 17666
+Rev Lights Bit Value     : 33282
+Brakes Temperature       : 18248, 20039, 33537, 18433
+Tyres Surface Temperature: 75, 110, 78, 75
+Tyres Inner Temperature  : 102, 162, 0, 102
+Engine Temperature       : 26177
+Tyres Pressure           : 6.034452E-39, -2.5849394E-26, -4.004265E-23, -4.0058158E-23
+Surface Type             : 7, 221, 0, 228
+-------------------
+
+-------------------
+Driver Name              : P??REZ
+Speed                    : 6718
+Throttle                 : 1.7497662E-38
+Steer                    : 0.0
+Brake                    : 3.271645E-39
+Clutch                   : 0
+Gear                     : 0
+Engine RPM               : 12288
+DRS                      : 3
+Rev Lights Percent       : 817
+Rev Lights Bit Value     : 744
+Brakes Temperature       : 23384, 21588, 747, 21588
+Tyres Surface Temperature: 110, 0, 79, 79
+Tyres Inner Temperature  : 162, 65, 102, 102
+Engine Temperature       : 26214
+Tyres Pressure           : 1.15407E-40, 1.4418174E-38, -1.5949736E-23, -1.5949766E-23
+Surface Type             : 30, 63, 78, 116
+-------------------
+
+-------------------
+Driver Name              : PIASTRI
+Speed                    : 35335
+Throttle                 : 6.8407E-41
+Steer                    : 1.5046328E-36
+Brake                    : 1.3825E-41
+Clutch                   : 0
+Gear                     : 0
+Engine RPM               : 803
+DRS                      : 37
+Rev Lights Percent       : 52995
+Rev Lights Bit Value     : 53762
+Brakes Temperature       : 21598, 20564, 21506, 22867
+Tyres Surface Temperature: 0, 102, 79, 110
+Tyres Inner Temperature  : 65, 102, 102, 162
+Engine Temperature       : 41574
+Tyres Pressure           : 9.1E-44, -1.8273716E-12, -1.1444282E-6, -1.1444282E-6
+Surface Type             : 63, 42, 59, 35
+-------------------
+
+-------------------
+Driver Name              : OCON
+Speed                    : 31966
+Throttle                 : 8.7E-44
+Steer                    : -6.61381E-27
+Brake                    : 1.744935E-39
+Clutch                   : 0
+Gear                     : 35
+Engine RPM               : 8451
+DRS                      : 3
+Rev Lights Percent       : 735
+Rev Lights Bit Value     : 733
+Brakes Temperature       : 21074, 20046, 19279, 21079
+Tyres Surface Temperature: 102, 102, 110, 0
+Tyres Inner Temperature  : 102, 102, 162, 65
+Engine Temperature       : 16802
+Tyres Pressure           : 0.0, 1.7E-43, 22.7, 22.7
+Surface Type             : 142, 227, 0, 0
+-------------------
+
+-------------------
+Driver Name              : HULKENBERG
+Speed                    : 48749
+Throttle                 : 0.4964851
+Steer                    : 1.3553321E-18
+Brake                    : 0.0
+Clutch                   : 137
+Gear                     : 3
+Engine RPM               : 907
+DRS                      : -107
+Rev Lights Percent       : 39171
+Rev Lights Bit Value     : 24835
+Brakes Temperature       : 25700, 28260, 24929, 25697
+Tyres Surface Temperature: 102, 162, 0, 102
+Tyres Inner Temperature  : 102, 162, 65, 102
+Engine Temperature       : 39489
+Tyres Pressure           : -3.85186E-34, -1.37452148E17, -4.0058158E-23, 6.034452E-39
+Surface Type             : 86, 160, 62, 230
+-------------------
+
+-------------------
+Driver Name              : NORRIS
+Speed                    : 62
+Throttle                 : 0.0
+Steer                    : 3.023761E-39
+Brake                    : 1.0384594E34
+Clutch                   : 3
+Gear                     : 118
+Engine RPM               : 19715
+DRS                      : 3
+Rev Lights Percent       : 842
+Rev Lights Bit Value     : 24929
+Brakes Temperature       : 25700, 110, 24929, 25700
+Tyres Surface Temperature: 162, 65, 102, 102
+Tyres Inner Temperature  : 162, 65, 102, 102
+Engine Temperature       : 39322
+Tyres Pressure           : 1.2306315E-38, 0.90939254, -1.5949766E-23, 2.355703E-38
+Surface Type             : 158, 189, 85, 136
+-------------------
+
+-------------------
+Driver Name              : GASLY
+Speed                    : 0
+Throttle                 : 3.761582E-37
+Steer                    : 1.4681E-41
+Brake                    : 6.23012E-37
+Clutch                   : 85
+Gear                     : 3
+Engine RPM               : 796
+DRS                      : 32
+Rev Lights Percent       : 24835
+Rev Lights Bit Value     : 24929
+Brakes Temperature       : 28260, 26112, 25697, 25700
+Tyres Surface Temperature: 65, 102, 102, 162
+Tyres Inner Temperature  : 65, 154, 102, 162
+Engine Temperature       : 46489
+Tyres Pressure           : 8.215E-41, 5.3902458E16, -1.1444282E-6, 9.1927E-41
+Surface Type             : 60, 0, 34, 20
+-------------------
+
+-------------------
+Driver Name              : ZHOU
+Speed                    : 0
+Throttle                 : 536.0
+Steer                    : 5.9E-44
+Brake                    : 32.56543
+Clutch                   : 2
+Gear                     : -114
+Engine RPM               : 36353
+DRS                      : 1
+Rev Lights Percent       : 18505
+Rev Lights Bit Value     : 18247
+Brakes Temperature       : 110, 26214, 19789, 19275
+Tyres Surface Temperature: 102, 102, 162, 65
+Tyres Inner Temperature  : 154, 153, 162, 65
+Engine Temperature       : 16821
+Tyres Pressure           : -262.00674, -4.029944E-21, 22.7, 0.0
+Surface Type             : 0, 0, 184, 60
+-------------------
+
+-------------------
+Driver Name              : LECLERC
+Speed                    : 0
+Throttle                 : 1.104802E-14
+Steer                    : 0.0
+Brake                    : 3.14461E-37
+Clutch                   : 81
+Gear                     : 2
+Engine RPM               : 596
+DRS                      : 90
+Rev Lights Percent       : 22875
+Rev Lights Bit Value     : 22109
+Brakes Temperature       : 26112, 41574, 20565, 28240
+Tyres Surface Temperature: 102, 162, 65, 102
+Tyres Inner Temperature  : 153, 181, 65, 154
+Engine Temperature       : 39489
+Tyres Pressure           : 0.0, -1.5474648E-35, 6.034452E-39, -8.0
+Surface Type             : 0, 0, 62, 0
+-------------------
+
+-------------------
+Driver Name              : VERSTAPPEN
+Speed                    : 0
+Throttle                 : 3.548229E-39
+Steer                    : -9.6714065E24
+Brake                    : -1.8165812E-15
+Clutch                   : 2
+Gear                     : -95
+Engine RPM               : 24834
+DRS                      : 93
+Rev Lights Percent       : 24929
+Rev Lights Bit Value     : 25700
+Brakes Temperature       : 26214, 16802, 25700, 110
+Tyres Surface Temperature: 162, 65, 102, 102
+Tyres Inner Temperature  : 181, 65, 154, 153
+Engine Temperature       : 39322
+Tyres Pressure           : 1.0, 0.108972296, 2.3571E-41, 2.2316026E-38
+Surface Type             : 0, 0, 0, 0
+-------------------
+
+-------------------
+Driver Name              : SAINZ
+Speed                    : 1536
+Throttle                 : 4.553639E-13
+Steer                    : 2.3069148E-37
+Brake                    : 9.992453E-38
+Clutch                   : 9
+Gear                     : 2
+Engine RPM               : 23390
+DRS                      : 97
+Rev Lights Percent       : 25697
+Rev Lights Bit Value     : 25700
+Brakes Temperature       : 41574, 26177, 28260, 26112
+Tyres Surface Temperature: 65, 154, 102, 162
+Tyres Inner Temperature  : 65, 154, 153, 181
+Engine Temperature       : 46489
+Tyres Pressure           : 5.7627435E-34, 1.725815E-38, 9.1927E-41, 7.7845E-41
+Surface Type             : 0, 0, 0, 0
+-------------------
+
+-------------------
+Driver Name              : ALONSO
+Speed                    : 62725
+Throttle                 : -6.571673E19
+Steer                    : -9.657878E21
+Brake                    : 5.8706898E17
+Clutch                   : 2
+Gear                     : 83
+Engine RPM               : 22871
+DRS                      : 97
+Rev Lights Percent       : 21588
+Rev Lights Bit Value     : 20561
+Brakes Temperature       : 16802, 26214, 110, 26214
+Tyres Surface Temperature: 154, 153, 162, 65
+Tyres Inner Temperature  : 154, 153, 181, 65
+Engine Temperature       : 16821
+Tyres Pressure           : 4.8055663E-6, 2.2027E-41, 0.0, 2.98E-43
+Surface Type             : 0, 5, 0, 0
+-------------------
+
+-------------------
+Driver Name              : BOTTAS
+Speed                    : 11877
+Throttle                 : NaN
+Steer                    : 2.9682838E-37
+Brake                    : 1.5061686E-37
+Clutch                   : 97
+Gear                     : 97
+Engine RPM               : 24929
+DRS                      : 100
+Rev Lights Percent       : 25700
+Rev Lights Bit Value     : 28260
+Brakes Temperature       : 26177, 41574, 26112, 41574
+Tyres Surface Temperature: 153, 181, 65, 154
+Tyres Inner Temperature  : 153, 181, 65, 154
+Engine Temperature       : 321
+Tyres Pressure           : -7.804376E31, 8.1E-44, -3.7780085E22, -0.0
+Surface Type             : 6, 49, 0, 0
+-------------------
+
+-------------------
+Driver Name              : TSUNODA
+Speed                    : 41
+Throttle                 : -7.1054274E-15
+Steer                    : 6.7543675E-24
+Brake                    : 1.4997891E20
+Clutch                   : 97
+Gear                     : 97
+Engine RPM               : 25697
+DRS                      : 100
+Rev Lights Percent       : 25700
+Rev Lights Bit Value     : 110
+Brakes Temperature       : 26214, 16802, 26214, 16802
+Tyres Surface Temperature: 181, 65, 154, 153
+Tyres Inner Temperature  : 181, 65, 154, 153
+Engine Temperature       : 0
+Tyres Pressure           : 0.12276211, 0.0, 1.7173238E-38, 0.93821645
+Surface Type             : 179, 40, 0, 5
+-------------------
+
+-------------------
+Driver Name              : SARGEANT
+Speed                    : 0
+Throttle                 : 4.8783016E-37
+Steer                    : 3.4238076E-37
+Brake                    : 2.594204E20
+Clutch                   : 97
+Gear                     : 97
+Engine RPM               : 25700
+DRS                      : 100
+Rev Lights Percent       : 28260
+Rev Lights Bit Value     : 26112
+Brakes Temperature       : 41574, 39489, 41574, 26177
+Tyres Surface Temperature: 65, 154, 153, 181
+Tyres Inner Temperature  : 65, 0, 153, 181
+Engine Temperature       : 0
+Tyres Pressure           : 5.672629E-39, 0.0, 7.6051E-41, -4.1524943E-17
+Surface Type             : 40, 0, 6, 86
+-------------------
+
+-------------------
+Driver Name              : RUSSELL
+Speed                    : 0
+Throttle                 : 2.1863465E9
+Steer                    : 6.258837E26
+Brake                    : 8.8182732E11
+Clutch                   : 78
+Gear                     : 95
+Engine RPM               : 23134
+DRS                      : 89
+Rev Lights Percent       : 124
+Rev Lights Bit Value     : 3161
+Brakes Temperature       : 16797, 31699, 16798, 40162
+Tyres Surface Temperature: 180, 238, 172, 65
+Tyres Inner Temperature  : 0, 0, 171, 65
+Engine Temperature       : 0
+Tyres Pressure           : 0.0, 0.0, 0.0, 0.0
+Surface Type             : 0, 0, 0, 0
+-------------------

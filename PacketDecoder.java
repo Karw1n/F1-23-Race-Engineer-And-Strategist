@@ -1,6 +1,4 @@
 import java.math.BigInteger;
-import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +9,8 @@ public class PacketDecoder {
     private PacketParticipantData participantDataPacket;
     private PacketCarTelemetryData carTelemetryDataPacket;
     private PacketEventData eventDataPacket;
+    private PacketCarDamageData carDamageDataPacket;
+    private PacketTyreSetData tyreSetDataPacket;
     private static List<String> drivers = new ArrayList<>();
 
     public PacketDecoder(byte[] data) {
@@ -18,6 +18,8 @@ public class PacketDecoder {
         this.lapDataPacket = new PacketLapData();
         this.participantDataPacket = new PacketParticipantData();
         this.carTelemetryDataPacket =  new PacketCarTelemetryData();
+        this.carDamageDataPacket = new PacketCarDamageData();
+        this.tyreSetDataPacket = new PacketTyreSetData();
     }
 
     public PacketDecoder(byte[] data, PacketLapData lapDataPacket, PacketParticipantData participantDataPacket, PacketCarTelemetryData carTelemetryDataPacket){
@@ -52,10 +54,12 @@ public class PacketDecoder {
             return buildParticipantsDataPacket(header);
         } else if (packetId == 6) {
             return buildCarTelemetryDataPacket(header);
+        } else if (packetId == 10) {
+            return buildCarDamageDataPacket(header);
+        } else if (packetId == 12 && packetBuffer.getNextUInt8AsInt() == header.getPlayerCarIndex()) {
+            return buildTyreSetDataPacket(header);
         } else {
-            Packet packet = new Packet();
-            packet.setHeader(header);
-            return packet;
+            return null;
         }
     }
 
@@ -64,7 +68,7 @@ public class PacketDecoder {
         List<LapData> lapDataList = new ArrayList<>();
 
         int i = 0;
-        int playerCarIndex = header.getPlayerCarIndex();
+        // int playerCarIndex = header.getPlayerCarIndex();
         while (i < 20) { //max number of cars
 
             LapData lapData = new LapData();
@@ -213,5 +217,67 @@ public class PacketDecoder {
             eventDataPacket.setFastestLap(fastestLapData);
         }
         return eventDataPacket;
+    }
+
+    public Packet buildCarDamageDataPacket(Header header) {
+        this.carDamageDataPacket.setHeader(header);
+        List<CarDamageData> carDamageDataList = new ArrayList<>();
+
+        for (int i = 0; i < 20; i++) {
+            CarDamageData carDamageData = new CarDamageData();
+            if (!(PacketDecoder.drivers.isEmpty())) {
+                carDamageData.setDriverName(PacketDecoder.drivers.get(i));
+            }
+            carDamageData.setTyresWear(packetBuffer.getNextFloatArray(4));
+            carDamageData.setTyresDamage(packetBuffer.getNextUInt8ArrayAsIntegerArray(4));
+            carDamageData.setBrakesDamage(packetBuffer.getNextUInt8ArrayAsIntegerArray(4));
+            carDamageData.setFrontLeftWingDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setFrontRightWingDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setRearWingDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setFloorDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setDiffuserDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setSidepodDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setDrsFault(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setErsFault(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setGearBoxDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineDamage(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineMGUHWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineESWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineCEWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineICEWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineMGUKWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineTCWear(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineBlown(packetBuffer.getNextUInt8AsInt());
+            carDamageData.setEngineSeized(packetBuffer.getNextUInt8AsInt());
+            carDamageDataList.add(carDamageData);
+        }
+        this.carDamageDataPacket.setCarDamageData(carDamageDataList);
+        return carDamageDataPacket;
+    }
+
+    public Packet buildTyreSetDataPacket(Header header) {
+        this.tyreSetDataPacket.setHeader(header);
+        this.tyreSetDataPacket.setCarIdx(packetBuffer.getNextUInt8AsInt());
+        if (!(PacketDecoder.drivers.isEmpty())) {
+            this.tyreSetDataPacket.setDriver(PacketDecoder.drivers.get(header.getPlayerCarIndex()));
+        }
+        
+        List<TyreSetData> tyreSetDataList = new ArrayList<>();
+        for (int i = 0; i < 20; i++) {
+            TyreSetData tyreSetData = new TyreSetData();
+            tyreSetData.setActualTyreCompound(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setVisualTyreCompound(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setWear(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setAvailable(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setRecommendedSession(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setLifeSpan(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setUsableLife(packetBuffer.getNextUInt8AsInt());
+            tyreSetData.setLapDeltaTime(packetBuffer.getNextInt8AsInt()); //this might lead to errors as it's unsigned
+            tyreSetData.setFitted(packetBuffer.getNextUInt8AsInt());
+            tyreSetDataList.add(tyreSetData);
+        }
+        this.tyreSetDataPacket.setTyreSetData(tyreSetDataList);
+        this.tyreSetDataPacket.setFittedIdx(packetBuffer.getNextUInt8AsInt());
+        return tyreSetDataPacket;
     }
 }

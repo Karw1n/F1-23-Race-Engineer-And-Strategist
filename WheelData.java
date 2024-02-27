@@ -49,9 +49,6 @@ public class WheelData<T> {
 
 	public String toString() {
 		return
-			"FL: "  + frontLeft +
-			" FR: "  + frontRight +
-			" RL: "  + rearLeft  + 
-			" RR: " + rearRight;
+			 frontLeft + ", " + frontRight + ", " + rearLeft + ", " + rearRight;
 	}
 }

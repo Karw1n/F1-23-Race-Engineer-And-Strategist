@@ -51,50 +51,53 @@ public class Client{
                 //PacketDecoder packetDecoder = new PacketDecoder(receivedData, lapDataPacket, participantDataPacket, carTelemetryDataPacket);
                 PacketDecoder packetDecoder = new PacketDecoder(receivedData);
                 Packet somePacket = packetDecoder.buildPacket();
-                String stringToSave = somePacket.toString();
-                String fileNameLocation = "file.dat";
-                if (somePacket.getHeader().getPacketId() == 2) {
-                    fileNameLocation = "lapData.dat"; 
-                } else if (somePacket.getHeader().getPacketId() == 3) { 
-                    fileNameLocation = "eventData.dat";
-                }else if (somePacket.getHeader().getPacketId() == 4) {
-                    fileNameLocation = "participantData.dat";
-                // }
-                } else if (somePacket.getHeader().getPacketId() == 6) {
-                    fileNameLocation = "carTelemetryData.dat";
-                } 
-                
-                
-
-                if (somePacket.getHeader().getPacketId() != 3) {
+                if (somePacket != null) {
+                    String stringToSave = somePacket.toString();
+                    String fileNameLocation = "file.dat";
+                    if (somePacket.getHeader().getPacketId() == 2) {
+                        fileNameLocation = "lapData.dat"; 
+                    } else if (somePacket.getHeader().getPacketId() == 3) { 
+                        fileNameLocation = "eventData.dat";
+                    }else if (somePacket.getHeader().getPacketId() == 4) {
+                        fileNameLocation = "participantData.dat";
+                    } else if (somePacket.getHeader().getPacketId() == 6) {
+                        fileNameLocation = "carTelemetryData.dat";
+                    } else if (somePacket.getHeader().getPacketId() == 10) {
+                        fileNameLocation = "carDamageData.dat";
+                    } else if (somePacket.getHeader().getPacketId() == 12) {
+                        fileNameLocation = "tyreSetData.dat";
+                    }
                     
-                    FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
-                    newOutputStream.write(stringToSave.getBytes());
-                    newOutputStream.close();
-                } else {
-                    FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation, true);
                     
-                    newOutputStream.write(stringToSave.getBytes());
-                    newOutputStream.close();
+                    
+                    if (somePacket.getHeader().getPacketId() != 3) {
+                            
+                        FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation);
+                        newOutputStream.write(stringToSave.getBytes());
+                        newOutputStream.close();
+                    } else {
+                        FileOutputStream newOutputStream = new FileOutputStream(fileNameLocation, true);    
+                        newOutputStream.write(stringToSave.getBytes());
+                        newOutputStream.close();
+                    }
                 }
-
-                test.order(ByteOrder.LITTLE_ENDIAN);
+                // test.order(ByteOrder.LITTLE_ENDIAN);
                 
-                int packetLength = packet.getLength();
-                //System.out.println("packetLength is: " + packetLength);
-                test.position(6);
-                int packetType = 0xFF & test.get();
-                //System.out.println("Packet Type is: " + packetType);
+                // int packetLength = packet.getLength();
+                // //System.out.println("packetLength is: " + packetLength);
+                // test.position(6);
+                // int packetType = 0xFF & test.get();
+                // //System.out.println("Packet Type is: " + packetType);
 
-                //Print Participant data list.
+                // //Print Participant data list.
                 
-                String message = "PType: " +  (Integer.toString(packetType) + " Packet Size: " + (Integer.toString(packetLength)) + "[ "  + "  ]"  + "\n");
-                byte[] fileMessage = message.getBytes();
+                // String message = "PType: " +  (Integer.toString(packetType) + " Packet Size: " + (Integer.toString(packetLength)) + "[ "  + "  ]"  + "\n");
+                // byte[] fileMessage = message.getBytes();
                 
             
-                FileOutputStream outputStream = new FileOutputStream(fileName, true);
-                outputStream.write(fileMessage);
-                outputStream.close();
+                // FileOutputStream outputStream = new FileOutputStream(fileName, true);
+                // outputStream.write(fileMessage);
+                // outputStream.close();
             }
 
         } catch (Exception e) {

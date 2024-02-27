@@ -1,0 +1,12 @@
+1. Gap to Driver in front.
+2. Gap to driver behind.
+3. Time gained/lost to driver in front.
+4. Time gained/lost to driver behind.
+5. My current position.
+6. Last Lap Time.
+7. Fastest lap of the session.
+8. Difference between fastest lap and my previous lap.
+9. What is my tyre wear?
+10. What is my expected tyre life?
+11. How many laps until the pit window?
+12. Who am I racing?

@@ -87,14 +87,14 @@ public class TyreSetData {
 
     public String toString() {
         String data = 
-        "Actual Tyre Compound       : " + actualTyreCompound
+            "Actual Tyre Compound   : " + actualTyreCompound
         + "\nVisual Tyre Compound   : " + visualTyreCompound
         + "\nWear                   : " + wear
-        + "\nAvailable: " + available
+        + "\nAvailable              : " + available
         + "\nRecomended Session     : " + recommendedSession
         + "\nLife Span              : " + lifeSpan
         + "\nUsable Life            : " + usableLife
-        + "\nLap Delta Time         :" + lapDeltaTime
+        + "\nLap Delta Time         : " + lapDeltaTime
         + "\nFitted                 : " + fitted;
         return data;
     }
